@@ -1,7 +1,6 @@
 
 import aiohttp
 import logging
-import time
 
 from qtoggleserver.lib.templatenotifications import TemplateNotificationsHandler
 
@@ -21,7 +20,7 @@ class PushoverHandler(TemplateNotificationsHandler):
 
         super().__init__(**kwargs)
 
-    async def push_message(self, event, title, body, **kwargs):
+    async def push_message(self, event, title, body=None, **kwargs):
         url = self.BASE_URL + self.MESSAGES_ENDPOINT
         data = {
             'title': title,
