@@ -2,6 +2,7 @@
 import aiohttp
 import logging
 
+from qtoggleserver.conf import settings
 from qtoggleserver.lib.templatenotifications import TemplateNotificationsHandler
 
 
@@ -30,6 +31,10 @@ class PushoverHandler(TemplateNotificationsHandler):
             'user': self._user_keys,
             'timestamp': int(event.get_timestamp())
         }
+
+        if settings.public_url:
+            data['url'] = settings.public_url
+            data['url_title'] = 'Open App'
 
         async with aiohttp.ClientSession() as session:
             async with session.post(url, data=data) as response:
