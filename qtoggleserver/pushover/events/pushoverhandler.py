@@ -15,7 +15,7 @@ class PushoverHandler(TemplateNotificationsHandler):
 
     logger = logger
 
-    def __init__(self, user_keys, api_key, **kwargs):
+    def __init__(self, user_keys, api_key, **kwargs) -> None:
         self._user_keys = user_keys
         self._api_key = api_key
 
