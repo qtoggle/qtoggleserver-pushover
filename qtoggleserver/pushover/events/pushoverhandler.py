@@ -2,7 +2,10 @@
 import aiohttp
 import logging
 
+from typing import List, Optional
+
 from qtoggleserver.conf import settings
+from qtoggleserver.core import events as core_events
 from qtoggleserver.lib.templatenotifications import TemplateNotificationsHandler
 
 
@@ -15,13 +18,13 @@ class PushoverHandler(TemplateNotificationsHandler):
 
     logger = logger
 
-    def __init__(self, user_keys, api_key, **kwargs) -> None:
-        self._user_keys = user_keys
-        self._api_key = api_key
+    def __init__(self, user_keys: List[str], api_key: str, **kwargs) -> None:
+        self._user_keys: List[str] = user_keys
+        self._api_key: str = api_key
 
         super().__init__(**kwargs)
 
-    async def push_message(self, event, title, body=None, **kwargs):
+    async def push_message(self, event: core_events.Event, title: str, body: Optional[str] = None, **kwargs) -> None:
         url = self.BASE_URL + self.MESSAGES_ENDPOINT
         data = {
             'title': title,
