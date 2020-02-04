@@ -1,18 +1,18 @@
-### About
+## About
 
 This is an addon for [qToggleServer](https://github.com/qtoggle/qtoggleserver).
 
 It provides push notifications for qToggleServer via [Pushover](https://pushover.net/).
 
 
-### Install
+## Install
 
 Install using pip:
 
     pip install qtoggleserver-pushover
 
 
-### Usage
+## Usage
 
 You'll need to register your account on [Pushover](https://pushover.net/), if you haven't done it yet. On their home
 page, you'll see your *User Key*; copy it and use it in the configuration below. You can add more than one user key, if
