@@ -39,6 +39,8 @@ class PushoverHandler(TemplateNotificationsHandler):
             data['url'] = settings.public_url
             data['url_title'] = 'Open App'
 
-        async with aiohttp.ClientSession() as session:
+        async with aiohttp.ClientSession(raise_for_status=True) as session:
             async with session.post(url, data=data) as response:
-                return await response.json()
+                await response.json()
+
+        self.logger.debug('message pushed')
