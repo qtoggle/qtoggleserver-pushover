@@ -15,7 +15,6 @@ setup(
     packages=find_namespace_packages(),
 
     install_requires=[
-        'aiohttp',
-        'jinja2'
+        'aiohttp'
     ]
 )
