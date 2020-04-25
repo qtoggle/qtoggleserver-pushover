@@ -23,7 +23,7 @@ Copy the API key and use it in the configuration below:
 
 
 ##### `qtoggleserver.conf:`
-``` javascript
+``` ini
 ...
 event_handlers = [
     ...
@@ -39,4 +39,4 @@ event_handlers = [
 ```
 
 For further customization, see
-[Template Notifications](https://github.com/qtoggle/qtoggleserver/wiki/Template-Notifications)
+[Template Notifications](https://github.com/qtoggle/qtoggleserver/wiki/Template-Notifications).
