@@ -12,7 +12,7 @@ from qtoggleserver.lib.templatenotifications import TemplateNotificationsHandler
 logger = logging.getLogger(__name__)
 
 
-class PushoverHandler(TemplateNotificationsHandler):
+class PushoverEventHandler(TemplateNotificationsHandler):
     BASE_URL = 'https://api.pushover.net/1'
     MESSAGES_ENDPOINT = '/messages.json'
 

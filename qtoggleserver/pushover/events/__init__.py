@@ -1,2 +1,0 @@
-
-from .pushoverhandler import PushoverHandler

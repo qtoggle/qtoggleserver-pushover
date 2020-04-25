@@ -28,7 +28,7 @@ Copy the API key and use it in the configuration below:
 event_handlers = [
     ...
     {
-        driver = "qtoggleserver.pushover.events.PushoverHandler"
+        driver = "qtoggleserver.pushover.PushoverEventHandler"
         user_keys = ["r7zxs1nj20w86bghyub5div8jyzyiw"]
         api_key = "nwn1cmgc9m6sjhrv1o4roebpb31b5i"
         ...
