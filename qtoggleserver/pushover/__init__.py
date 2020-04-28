@@ -2,4 +2,4 @@
 from .pushovereventhandler import PushoverEventHandler
 
 
-VERSION = 'unknown'
+VERSION = 'unknown-version'

@@ -1,12 +1,10 @@
 
 from setuptools import setup, find_namespace_packages
 
-from qtoggleserver.pushover import VERSION
-
 
 setup(
     name='qtoggleserver-pushover',
-    version=VERSION,
+    version='unknown-version',
     description='PushOver notifications for qToggleServer',
     author='Calin Crisan',
     author_email='ccrisan@gmail.com',
