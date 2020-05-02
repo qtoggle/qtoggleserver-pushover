@@ -18,7 +18,7 @@ class PushoverEventHandler(TemplateNotificationsHandler):
 
     logger = logger
 
-    def __init__(self, user_keys: List[str], api_key: str, **kwargs) -> None:
+    def __init__(self, *, user_keys: List[str], api_key: str, **kwargs) -> None:
         self._user_keys: List[str] = user_keys
         self._api_key: str = api_key
 
@@ -43,4 +43,4 @@ class PushoverEventHandler(TemplateNotificationsHandler):
             async with session.post(url, data=data) as response:
                 await response.json()
 
-        self.logger.debug('message pushed')
+        self.debug('message pushed')
