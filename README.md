@@ -40,3 +40,6 @@ event_handlers = [
 
 For further customization, see
 [Template Notifications](https://github.com/qtoggle/qtoggleserver/wiki/Template-Notifications).
+
+For advanced event filtering, see
+[Filter Event Handlers](https://github.com/qtoggle/qtoggleserver/wiki/Filter-Event-Handlers).
