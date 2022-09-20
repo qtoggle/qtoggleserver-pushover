@@ -2,7 +2,7 @@
 import aiohttp
 import logging
 
-from typing import List, Optional
+from typing import Optional
 
 from qtoggleserver.conf import settings
 from qtoggleserver.core import events as core_events
@@ -18,8 +18,8 @@ class PushoverEventHandler(TemplateNotificationsHandler):
 
     logger = logger
 
-    def __init__(self, *, user_keys: List[str], api_key: str, **kwargs) -> None:
-        self._user_keys: List[str] = user_keys
+    def __init__(self, *, user_keys: list[str], api_key: str, **kwargs) -> None:
+        self._user_keys: list[str] = user_keys
         self._api_key: str = api_key
 
         super().__init__(**kwargs)
