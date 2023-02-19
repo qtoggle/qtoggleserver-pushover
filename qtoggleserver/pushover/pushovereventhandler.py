@@ -17,9 +17,10 @@ class PushoverEventHandler(TemplateNotificationsHandler):
 
     logger = logger
 
-    def __init__(self, *, user_keys: list[str], api_key: str, **kwargs) -> None:
+    def __init__(self, *, user_keys: list[str], api_key: str, sound: Optional[str] = None, **kwargs) -> None:
         self._user_keys: list[str] = user_keys
         self._api_key: str = api_key
+        self._sound: Optional[str] = sound
 
         super().__init__(**kwargs)
 
@@ -33,6 +34,8 @@ class PushoverEventHandler(TemplateNotificationsHandler):
             'user': self._user_keys,
             'timestamp': int(event.get_timestamp())
         }
+        if self._sound:
+            data['sound'] = self._sound
 
         if settings.public_url:
             data['url'] = settings.public_url

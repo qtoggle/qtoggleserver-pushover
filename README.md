@@ -31,6 +31,7 @@ event_handlers = [
         driver = "qtoggleserver.pushover.PushoverEventHandler"
         user_keys = ["r7zxs1nj20w86bghyub5div8jyzyiw"]
         api_key = "nwn1cmgc9m6sjhrv1o4roebpb31b5i"
+        sound = "pushover"  # optional
         ...
     }
     ...
@@ -43,3 +44,5 @@ For further customization, see
 
 For advanced event filtering, see
 [Filter Event Handlers](https://github.com/qtoggle/qtoggleserver/wiki/Filter-Event-Handlers).
+
+For available Pushover sounds, see [Pushover Sounds](https://pushover.net/api#sounds).
