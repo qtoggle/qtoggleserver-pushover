@@ -1,4 +1,6 @@
 from .pushovereventhandler import PushoverEventHandler
 
 
-VERSION = 'unknown-version'
+__all__ = ["PushoverEventHandler"]
+
+VERSION = "unknown-version"
