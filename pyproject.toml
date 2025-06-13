@@ -1,6 +1,6 @@
 [project]
 name = "qtoggleserver-pushover"
-version = "unknown-version"
+version = "0.0.0"
 description = "PushOver notifications for qToggleServer"
 authors = [
     {name = "Calin Crisan", email = "ccrisan@gmail.com"},
@@ -14,7 +14,8 @@ dependencies = [
 
 [dependency-groups]
 dev = [
-  "ruff",
+    "pre-commit",
+    "ruff",
 ]
 
 [tool.ruff]
