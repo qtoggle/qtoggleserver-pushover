@@ -4,7 +4,7 @@ import aiohttp
 
 from qtoggleserver.conf import settings
 from qtoggleserver.core import events as core_events
-from qtoggleserver.lib.templatenotifications import TemplateNotificationsHandler
+from qtoggleserver.lib.template_notifications import TemplateNotificationsHandler
 
 
 logger = logging.getLogger(__name__)
